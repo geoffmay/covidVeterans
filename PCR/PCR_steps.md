@@ -44,7 +44,7 @@
             * gradually add mRNA until you get it.
                 * could you start with a lower volume of solvent in case you're starting with very little mRNA?
             * don't proceed if you can't achieve this concentration. tell the patient you need another, better sample.
-        * save the rest of your RNA at in -20 degrees C for shipment (on dry ice) back to the central lab
+        * save the rest of your RNA in -20 degrees C for shipment (on dry ice) back to the central lab
             * at -80 it's good for 3-4 years
         * combine your mRNA with:
             * DNA nucleotides 
@@ -56,13 +56,16 @@
             * save whatever you don't amplify for analysis of mRNA expression
                 * they should be shipped back on dry ice, and stored at -20 is fine
                     * because DNA is more stable than RNA.
-* now do real-time PCR
-    * you are going to cause taq polymerase to make lots of copies of the cDNA
+* now do real-time PCR amplification
+    * you are going to cause taq polymerase to make lots of copies of the cDNA that responds to your primer
     * add your buffer than contains primers and taq polymerase
-        * taq polymerase will bind and make a copy of the DNA when it's warm and release when it's cool
-        * different primers have different annealing temperatures.
+        * taq polymerase will bind and make a copy of the DNA when it's cool ("annealing")
+            * this makes a copy of single-stranded gene on the cDNA
+        * the double-helix will split into single-stranded genes ("denature") when it's warm
+        * different primers have different annealing and denaturing temperatures.
             * e.g. ~60.5 vs. 62 degrees Celsius.
             * that level of precision is important.
+                * this means that you would need a separate chamber for each test to be run.
     * taq polymerase starts at the primer and creates a copy of your chosen cDNA gene.
         * there can be quality problems with different taq polymerases.
             * type 1 always works.
@@ -72,12 +75,12 @@
     * you will do up to 40 cycles of heating and cooling.
         * each cycle takes 2-3 minutes
         * most machines run these in series (!)
-            * because all the cycles are the same, you could have a larger chamber that runs cycles in parallel
+            * because all the cycles (for each primer) are the same, you could have a larger chamber that runs cycles in parallel
             * the robot just needs to keep track of when each vial went in and needs to come out  
-    * after your last cycle, you attach a primer that has fluorescein dye.
-        * with realtime PCA, all your primers have the dye and they get measured after every cycle.
-            * (how do you detect only the dye that is bound to DNA?)
-        * a photodetector will register be brighter if you started with a higher concentration.
+    * with realtime PCA, all your primers have [fluorescein](https://en.wikipedia.org/wiki/Fluorescein_amidite) dye and they get measured after every cycle.
+        * before they are bound, they have a [quencher](https://en.wikipedia.org/wiki/Quenching_(fluorescence)) how do you detect only the dye that is bound to DNA?
+        * You shine a 494 nm light and the dye will [emit](https://en.wikipedia.org/wiki/Fluorescein) light at 512 nm (in water).
+        * a photodetector will sense more brightness if you started with a higher concentration.
             * this will rise exponentially as you double the amount of target DNA you have each cycle.
         * you can report your result if you detect something at an eariler cycle
             * if you have excess capacity, you can continue your cycles to watch your curve behave properly

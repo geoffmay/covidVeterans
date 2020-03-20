@@ -1,5 +1,5 @@
 * Figure out whether BSL-4 compliance and  be acheived in a box on wheels with a robot inside
-    * acquire resources on how to achieve BSL-4 compliance
+    * (_Tobin_) acquire resources on how to achieve BSL-4 compliance 
     * enumerate what design elements are necessary ([link](./Design/Enclosure/components.md))
 
 * design (or choose) a swab kit that can be handled reliably by a robot
